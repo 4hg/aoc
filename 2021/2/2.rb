@@ -1,0 +1,1 @@
+->i{x=y=a=0;i.each{|c,v|c==?f?(x+=v;y+=v*a):(a+=v.*c==?u?-1:1)};p x*a,x*y}[$<.map{|l|l=l.chop.split;[l[0][0],l[1].to_i]}]
