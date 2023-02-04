@@ -1,7 +1,7 @@
 @input = open("input.txt").readlines.map &:chomp
 
 def go dx, dy = 1
-    @input.each_slice(dy).map.with_index{|line, y| line[0][(y*dx) % line[0].size] == ?#}.count true
+  @input.each_slice(dy).map.with_index{|line, y| line[0][(y*dx) % line[0].size] == ?#}.count true
 end
 
 # part 1
