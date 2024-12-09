@@ -27,7 +27,7 @@ struct Point {
         import std.math : sqrt;
         import std.math.rounding : floor;
 
-        int w = to!int(floor((sqrt(8.0 * z + 1) - 1) / 2));
+        int w = (((8.0 * z + 1).sqrt - 1) / 2).floor.to!int;
         int t = (w * w + w) / 2;
         int _y = z - t;
         int _x = w - _y;
@@ -75,7 +75,7 @@ long silver(const Point start, const string[][] grid) {
 }
 
 int gold(const Point start, const string[][] grid) {
-    string[][] ngrid = grid.map!(row => row.dup).array;
+    string[][] ngrid = grid.map!dup.array;
     auto visited = simulate(start, grid);
     int count = 0;
 
@@ -93,7 +93,7 @@ int gold(const Point start, const string[][] grid) {
 
 void main() {
     auto lines = readText("input.txt").splitLines();
-    string[][] grid = lines.map!(line => line.map!(c => c.to!string).array).array;
+    string[][] grid = lines.map!(line => line.map!(to!string).array).array;
     Point start;
 
     for (int r = 0; r < grid.length; r++) {
