@@ -96,10 +96,10 @@ void main() {
     string[][] grid = lines.map!(line => line.map!(to!string).array).array;
     Point start;
 
-    for (int r = 0; r < grid.length; r++) {
-        for (int c = 0; c < grid.length; c++) {
-            if (grid[r][c] == "^") {
-                start = Point(c, r);
+    foreach (r, ref row; grid) {
+        foreach (c, ref cell; row) {
+            if (cell == "^") {
+                start = Point(c.to!int, r.to!int);
             }
         }
     }
