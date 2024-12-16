@@ -18,7 +18,7 @@ R =. {{)v
   wd 'psel w0; ptop'
   vmcc =: glpaint_jgl2_ @ viewmatcc_jviewmat_
   
-  C =: 7900
+  C =: 0
   update =: {{)v
     im =: 1 (F C) } D $ 0
     C =: >: C
