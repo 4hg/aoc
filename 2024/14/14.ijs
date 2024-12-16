@@ -2,7 +2,7 @@ require 'format/printf viewmat'
 coinsert 'jgl2'
 
 
-'P V' =. (|./.~ I.@2 2 $~ #) ".&> '-?\d+' rxall fread 'D:\south\Desktop\repos\aoc\2024\14\input.txt'
+'P V' =. (|./.~ I.@2 2 $~ #) ".&> '-?\d+' rxall fread 'input.txt'
 D =: 103 101
 M =. D $~ # P
 F =: _2 <\ M | P +~ V * ]
